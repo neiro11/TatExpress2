@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TatExpress2.Views.Register" Shell.NavBarIsVisible="False">
+    <Grid>
+
+
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" Spacing="0" Padding="0,15,0,0">
+                <Label Text="Вход" FontSize="Large" FontAttributes="Bold" TextColor="Black"  HorizontalOptions="CenterAndExpand" Margin="0,0,-45,0"/>
+                <ImageButton Source="close.png" WidthRequest="25" Clicked="ImageButton_Clicked_1" HorizontalOptions="End" Margin="0,0,20,0" BackgroundColor="White"></ImageButton>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Spacing="0" Margin="0,25,0,0">
+                <Label Text="Войдите, чтобы видеть ваши заказы " HorizontalTextAlignment="Center"></Label>
+                   <Label Text="и сохраненные товары" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Spacing="20" Margin="0,30,0,0">
+                <Entry x:Name="email" Placeholder="Email вашего аккаунта" FontSize="16" PlaceholderColor="#9A9292" HorizontalOptions="Center" WidthRequest="350"></Entry>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Entry x:Name="pass" Placeholder="Введите пароль" FontSize="16" PlaceholderColor="#9A9292"  HorizontalOptions="Center" WidthRequest="320" IsPassword="True"/>
+                    <ImageButton Source="eye.png" WidthRequest="30" BackgroundColor="White" Clicked="ImageButton_Clicked"></ImageButton>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Spacing="30" Margin="0,40,0,0">
+                <Button Text="Войти" Clicked="Button_Clicked" FontSize="17" FontAttributes="Bold" WidthRequest="300" HeightRequest="50" BackgroundColor="#E51E1E" CornerRadius="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="Забыли пароль?" TextColor="#E51E1E" HorizontalOptions="Center"></Label>
+                <Label Text="Зарегистрироваться как поставщик"  FontSize="15" TextColor="#E51E1E" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,10">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <Label Text="Зарегистрироваться"  FontSize="17" TextColor="#E51E1E" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="0,0,0,40">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label> 
+            
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

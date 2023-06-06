@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:TatExpress2;assembly=TatExpress2"
+             x:Class="TatExpress2.Views.Store_page_vender"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#FFFFFF</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal" Spacing="0" Padding="0,10,0,0">
+                    <Label Text="Магазин" FontSize="Large" FontAttributes="Bold" TextColor="Gray"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Margin="0,0,-45,0"/>
+                    <ImageButton Source="close.png" WidthRequest="25"  VerticalOptions="CenterAndExpand" HorizontalOptions="End"  Margin="0,0,20,0" BackgroundColor="White" Clicked="ImageButton_Clicked"></ImageButton>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10" Margin="0,10,0,0" >
+                    <Image x:Name="photo_store" Source="account.png" WidthRequest="90" Margin="20,0,0,0"/>
+                    <Label x:Name="store_name" Text="" FontSize="Large" FontAttributes="Bold" TextColor="Black"  VerticalOptions="CenterAndExpand" Margin="20,0,0,0"/>
+                    
+                </StackLayout>
+                <Grid Grid.Row="3" Margin="0,20,0,0">
+                    <Label x:Name="desc" Text="" FontSize="16" Margin="20,0,0,0"></Label>
+                </Grid>
+
+                <StackLayout Grid.Row="3" Orientation="Vertical">
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label Text="Название" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="name" Placeholder="Название" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label Text="Ссылка на логотип" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="logo" Placeholder="http://img.png" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center" MinimumHeightRequest="50">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label Text="Описание" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="description" Placeholder="Описание" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Button x:Name="update" Text="Изменить данные" Clicked="Button_Clicked_1" FontSize="17" Margin="0,10,0,0" FontAttributes="Bold" WidthRequest="300" HeightRequest="50" BackgroundColor="RoyalBlue" CornerRadius="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="Добавить товар +" TextColor="RoyalBlue" HorizontalOptions="Center" FontSize="15"  Margin="0,5,0,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"  CommandParameter="{Binding Id}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <!--Пункты Меню-->
+               
+                <Grid Grid.Row="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <CollectionView Grid.Row="1" x:Name="ProductCollection"  ItemsSource="{Binding Products}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BorderColor="White" Padding="10" Margin="5">
+                                    <Grid HeightRequest="350">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="4*" />
+                                            <RowDefinition Height="0.8*" />
+                                            <RowDefinition Height="0.6*" />
+                                        </Grid.RowDefinitions>
+                                        <Image Grid.Row="0" Source="{Binding Photo}" Aspect="AspectFill" >
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  CommandParameter="{Binding Id}" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Image  Grid.Row="0" Source="Heart.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Margin="0,5,5,0">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" CommandParameter="{Binding .}" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Label Grid.Row="1" Text="{Binding Name}" HorizontalOptions="Center" Margin="0,5,0,0" FontSize="16" />
+
+                                        <StackLayout Orientation="Horizontal" Grid.Row="2" >
+                                            <StackLayout Orientation="Horizontal"  Margin="0,5,0,0">
+                                                <Label  Text="{Binding Price}" x:Name="cost_1" FontSize="Body" FontAttributes="Bold"  TextColor="Black" />
+                                                <Label Text="₽"  FontSize="Body" FontAttributes="Bold"  TextColor="Black"></Label>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand"  >
+                                                <Image  Source="bag.png"  WidthRequest="25" Margin="0,0,10,15">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" CommandParameter="{Binding .}" />
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Grid>
+
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

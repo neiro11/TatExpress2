@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:TatExpress2;assembly=TatExpress2"
+             x:Class="TatExpress2.Views.Pay_page" Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Grid.Row="0"  Margin="0,0,0,20">
+                <Label Text="Оплата" FontSize="Large" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="1" Margin="20,0,20,20">
+                <Label Text="Выберите пункт выдачи заказов" FontSize="18"  TextColor="Black"/>
+
+                <Picker x:Name="ProductPicker" Title="Выберите пункт выдачи"  >
+                </Picker>
+                <Label x:Name="SelectedProductLabel" Text="Выбранный пункт выдачи:" />
+            </StackLayout>
+
+            <StackLayout Grid.Row="2">
+                <StackLayout Margin="20,0,20,0" >
+                    <Label Text="Введите данные для оплаты" TextColor="Black" FontSize="18"></Label>
+                    <Frame Margin="0,10,0,0">
+                        <StackLayout>
+                            <StackLayout Orientation="Vertical" Spacing="0">
+                                <Label Text="Номер карты" TextColor="Black" FontSize="15" Margin="3,0,0,-2"></Label>
+                                <local:CustomEntry x:Name="number" Placeholder="**** **** **** ****" FontSize="17" Text="" Margin="0" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical" Spacing="0">
+                                    <Label Text="Срок действия" TextColor="Black" FontSize="15" Margin="3,0,0,-2"></Label>
+                                    <StackLayout Orientation="Horizontal">
+                                        <local:CustomEntry x:Name="month" Placeholder="01" FontSize="17" Text="" Margin="0" />
+                                        <Label Text="/ " Margin="0,12,0,0"></Label>
+                                        <local:CustomEntry x:Name="year" Placeholder="24" FontSize="17" Text="" Margin="0" />
+                                    </StackLayout>
+
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical"  Spacing="0" Margin="25,1,0,0" >
+                                    <Label Text="CVV код" TextColor="Black" FontSize="15" Margin="3,0,0,-2"></Label>
+                                    <local:CustomEntry x:Name="cvv" Placeholder="***" FontSize="17" Text="" Margin="0" />
+                                </StackLayout>
+                               
+                            </StackLayout>
+                            <Label Text="TatExpress гарантирует безопасность ваших данных" FontSize="10"></Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <Frame  Margin="0,20,0,0" BorderColor="#ECECEC" HasShadow="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                       
+                        <StackLayout Grid.Row="2">
+                        <Label Text="Ваш заказ:" TextColor="Black" FontSize="16"></Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Orientation="Horizontal" Margin="0,5,0,0">
+                            <Label x:Name="countprod" Text="1" TextColor="Black" FontSize="14" VerticalOptions="Center"></Label>
+                        <Label Text=" товара:" TextColor="Black" FontSize="14" VerticalOptions="Center"></Label>
+                        <Label x:Name="itog_price1"  Text="" FontSize="14"  HorizontalOptions="EndAndExpand" TextColor="Black"></Label>
+                    </StackLayout>
+                    <Frame Grid.Row="4" CornerRadius="20" Margin="0,10,0,0" BorderColor="#ECECEC" HasShadow="False">
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="Ближайшая доставка" TextColor="Black" FontSize="14" VerticalOptions="Center"></Label>
+                            <Label  Text="Завтра после 13:30" TextColor="#00D923" FontSize="14" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,5,0,0">
+                        <Label Text="Итого:" TextColor="Black" FontSize="16" VerticalOptions="Center"></Label>
+                        <Label x:Name="itog_price"  Text="202,80 ₽" FontSize="16"  HorizontalOptions="EndAndExpand" TextColor="Black"></Label>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" Grid.Row="3" VerticalOptions="Center" Margin="0,30,0,0">
+                <Button Text="Оплатить" Clicked="Button_Clicked" FontSize="18" FontAttributes="Bold" WidthRequest="300" HeightRequest="50" BackgroundColor="#E51E1E" CornerRadius="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

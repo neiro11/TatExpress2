@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TatExpress2.Views.Product_page"  Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        
+        <ResourceDictionary>
+            <Color x:Key="Accent">#FFFFFF</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" x:Name="img" Source="" HeightRequest="450" Aspect="AspectFill"></Image>
+                <StackLayout Grid.Row="0">
+                    <Image  Source="Heart.png"  WidthRequest="40" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Margin="0,10,15,0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" CommandParameter="{Binding .}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            </Grid>
+            <Label x:Name="namep" Text="" Margin="10,10,0,0" FontSize="18"  TextColor="Black" FontAttributes="Bold"></Label>
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Text="Цена:" VerticalOptions="Center" Margin="10,0,0,0" TextColor="Black" FontSize="15"></Label>
+                <Label x:Name="cost" Text="1261"  VerticalOptions="Center" TextColor="Black" FontSize="17"  FontAttributes="Bold"></Label>
+                <Label  Text="₽"  VerticalOptions="Center" TextColor="Black" FontSize="17"  FontAttributes="Bold"></Label>
+                <Label  Text="В наличии: " FontSize="15" TextColor="#FF00E003" HorizontalOptions="EndAndExpand" VerticalOptions="Center"></Label>
+                <Label  x:Name="count" Text="2637" FontSize="15"  TextColor="#FF00E003" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,20,0"></Label>
+            </StackLayout>
+
+            <Frame Padding="10" CornerRadius="10" HasShadow="False" BorderColor="#F0F0F0" Margin="0,10,0,0" >
+                    <StackLayout Orientation="Horizontal" >
+                        <Image x:Name="logo_store" Source="Heart.png"  WidthRequest="40" VerticalOptions="CenterAndExpand" Margin="10,10,0,10"></Image>
+                        <Label VerticalOptions="CenterAndExpand" x:Name="name_store" Text="Sadri"  Margin="10,0,0,0" TextColor="Black" FontSize="15"></Label>
+                        <Image Source="catalog.png"  WidthRequest="25" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                    </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+            </Frame>
+           
+            <StackLayout Orientation="Vertical">
+                <Label Text="Описание товара" Margin="10,10,0,0" FontSize="17" > </Label>
+            <Label x:Name="desc" Text="" Margin="10,0,0,0"></Label>
+            </StackLayout>
+            <Button x:Name="Voiti" Text="Добавить в корзину"  Clicked="Voiti_Clicked" Margin="0,20,0,0" TextColor="White" FontSize="15" WidthRequest="300"  FontAttributes="Bold" HeightRequest="50" BackgroundColor="#E51E1E" CornerRadius="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

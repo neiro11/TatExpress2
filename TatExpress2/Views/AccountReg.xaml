@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TatExpress2.Views.AccountReg"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#FFFFFF</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="130"></RowDefinition>
+           
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <StackLayout 
+                HorizontalOptions="CenterAndExpand" Grid.Row="0" >
+            <Label Text="Аккаунт" FontSize="Large" FontAttributes="Bold" TextColor="Black" Margin="0"/>
+            
+            <ContentView Padding="0,10,0,0" VerticalOptions="FillAndExpand">
+                <Image x:Name="photo" Source="account.png" WidthRequest="80"/>
+            </ContentView>
+            
+        </StackLayout>
+        <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="2">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="4">
+                    <Label x:Name="name" Text="Ильдар" TextColor="Black" FontSize="16" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="surname" Text="Ситдиков" TextColor="Black" FontSize="16" HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+                <Label x:Name="email" Text="+7 906 323 31-37" TextColor="Black"  HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        
+        <!--<Frame CornerRadius="20" Grid.Row="2" HorizontalOptions="CenterAndExpand" Padding="25,15,25,15">
+            <StackLayout Orientation="Horizontal"  Grid.Row="3" >
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Заказ № 415236" TextColor="Black" FontSize="16" HorizontalTextAlignment="Start"/>
+                    <Label Text="Сумма заказа: 12 304₽" TextColor="Gray" FontSize="13" HorizontalTextAlignment="Start"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="25,0,0,0">
+                    <Frame CornerRadius="20" Padding="0" HorizontalOptions="End" VerticalOptions="Start" Margin="0,1,0,0"> 
+                        <Ellipse WidthRequest="15" HeightRequest="15" BackgroundColor="#00E340"  ></Ellipse>
+                    </Frame>
+                    <Label Text="Доставляется"  FontSize="14" HorizontalTextAlignment="End" VerticalOptions="Start" TextColor="#00E340"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>-->
+        <!--Пункты Меню-->
+        <Grid Grid.Row="2" Margin="0,20,0,0"> 
+            <StackLayout Orientation="Vertical" Spacing="18">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="korzina.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="Мои заказы" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                    <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                        </StackLayout.GestureRecognizers> 
+                    </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                        <Image Source="message.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="Мои отзывы" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                    <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                        <Image Source="percentage.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="Скидки и бонусы" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                        <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="notification.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="Уведомления" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                    <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="user.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                        <Label Text="Мой профиль" FontSize="17" TextColor="black" VerticalTextAlignment="Center" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="Location.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="Город:" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                    <Label Text="Казань" FontSize="15" TextColor="#575757" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" ></Label>
+                    <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="End" Margin="0,0,15,0"></Image>
+                </StackLayout>
+                   
+                    <StackLayout Orientation="Horizontal" >
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="map.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="Пункты выдачи:" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                    <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                </StackLayout>
+                <Line BackgroundColor="#D0D0D0" WidthRequest="350" HorizontalOptions="Center" HeightRequest="1"></Line>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="message_question.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="FAQ" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                    <Image Source="catalog.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="directboxreceive.png" WidthRequest="30" Margin="15,0,0,0"></Image>
+                    <Label Text="Связаться с нами" FontSize="17" TextColor="black" VerticalTextAlignment="Center"></Label>
+                    <Image Source="catalog.png" WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,15,0"></Image>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        <StackLayout Orientation="Vertical" Grid.Row="3" Spacing="20" Margin="0,30,0,2">
+            <Grid   HorizontalOptions="Center" VerticalOptions="Center">
+                <Button Text="Выйти" Clicked="Button_Clicked" FontSize="17" FontAttributes="Bold" WidthRequest="300" HeightRequest="50" BackgroundColor="#E51E1E" CornerRadius="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </Grid>
+    </ScrollView>
+</ContentPage>

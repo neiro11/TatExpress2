@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TatExpress2.Views.AddProduct"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#FFFFFF</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Entry x:Name="namep"></Entry>
+        <Entry x:Name="descp"></Entry>
+        <Entry x:Name="imagep"></Entry>
+        <Entry x:Name="pricep"></Entry>
+        <Button Text="AddItem" Clicked="Button_Clicked_1"></Button>
+        
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:TatExpress2;assembly=TatExpress2"
+             x:Class="TatExpress2.Views.vender_prof"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#FFFFFF</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Spacing="0" Padding="0,10,0,0">
+                <Label Text="Настройки профиля" FontSize="Large" FontAttributes="Bold" TextColor="Black"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Margin="0,0,-45,0"/>
+                <ImageButton Source="close.png" WidthRequest="25"  VerticalOptions="CenterAndExpand" HorizontalOptions="End" Clicked="ImageButton_Clicked" Margin="0,0,20,0" BackgroundColor="White"></ImageButton>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="10" Margin="0,10,0,0">
+                <Image x:Name="photo" Source="account.png" WidthRequest="90"/>
+            </StackLayout>
+
+            <!--Пункты Меню-->
+            <Grid Grid.Row="2" Margin="0,20,0,0">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Frame CornerRadius="10" Padding="10" HorizontalOptions="Center" BackgroundColor="RoyalBlue">
+                        <StackLayout>
+                            <Label Text="Настройки магазина" HorizontalOptions="Center" TextColor="White">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label Text="Фамилия" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="surname" Placeholder="Фамилия" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame> 
+                    
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="Имя" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="name" Placeholder="Имя" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label Text="Отчество" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="patronymic" Placeholder="Отчество" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label Text="Номер телефона" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="telephone" Placeholder="Номер телефона" FontSize="17" Text="+" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="Email" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="email" Placeholder="Email" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>  
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="КПП" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="kpp" Placeholder="" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame> 
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="БИК" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="bik" Placeholder="" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame> 
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="Расчетный_счет" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="rasch_chet" Placeholder="" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame> 
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="ОГРНИП" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="ogrnip" Placeholder="" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="Адрес" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="addres" Placeholder="" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame WidthRequest="330" CornerRadius="10" Padding="15,15,15,5" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label  Text="Форма_регистрации" FontSize="15" Margin="3,0,0,-2"></Label>
+                            <local:CustomEntry x:Name="reg_form" Placeholder="" FontSize="17" Text="" Margin="0" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+            <StackLayout Orientation="Vertical" Grid.Row="4" Spacing="20" Margin="0,30,0,2">
+                <Grid   HorizontalOptions="Center" VerticalOptions="Center">
+                    <Button Text="Подтвердить" Clicked="Button_Clicked" FontSize="17" FontAttributes="Bold" WidthRequest="300" HeightRequest="50"  BackgroundColor="RoyalBlue" CornerRadius="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

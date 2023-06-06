@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TatExpress2.Views.favotites" Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout 
+                HorizontalOptions="CenterAndExpand" Grid.Row="0" >
+                <Label Text="Желания" FontSize="Large" FontAttributes="Bold" TextColor="Black" Margin="0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" Grid.Row="1">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <CollectionView Grid.Row="1" x:Name="ProductCollection"  ItemsSource="{Binding Products}">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BorderColor="White" Padding="10" Margin="5">
+                                        <Grid HeightRequest="350">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="4*" />
+                                                <RowDefinition Height="0.8*" />
+                                                <RowDefinition Height="0.6*" />
+                                            </Grid.RowDefinitions>
+                                            <Image Grid.Row="0" Source="{Binding Photo}" Aspect="AspectFill" >
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  CommandParameter="{Binding Id}" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Image  Grid.Row="0" Source="Heart.png"  WidthRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Margin="0,5,5,0">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" CommandParameter="{Binding .}" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Label Grid.Row="1" Text="{Binding Name}" HorizontalOptions="Center" Margin="0,5,0,0" FontSize="16" />
+
+                                            <StackLayout Orientation="Horizontal" Grid.Row="2" >
+                                                <StackLayout Orientation="Horizontal"  Margin="0,5,0,0">
+                                                    <Label  Text="{Binding Price}" x:Name="cost_1" FontSize="Body" FontAttributes="Bold"  TextColor="Black" />
+                                                    <Label Text="₽"  FontSize="Body" FontAttributes="Bold"  TextColor="Black"></Label>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand"  >
+                                                    <Image  Source="bag.png"  WidthRequest="25" Margin="0,0,10,15">
+                                                        <Image.GestureRecognizers>
+                                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" CommandParameter="{Binding .}" />
+                                                        </Image.GestureRecognizers>
+                                                    </Image>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+
+</ContentPage>

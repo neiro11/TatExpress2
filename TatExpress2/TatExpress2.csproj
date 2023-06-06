@@ -1,0 +1,115 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Testdb.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Testdb.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CarouselView.FormsPlugin" Version="6.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
+    <PackageReference Include="MySqlConnector" Version="2.2.6" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />  
+    <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2578" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Maps.xaml.cs">
+      <DependentUpon>Maps.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AddProduct.xaml.cs">
+      <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\employee_page.xaml.cs">
+      <DependentUpon>employee_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AddProduct_page.xaml.cs">
+      <DependentUpon>AddProduct_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\pp_owner.xaml.cs">
+      <DependentUpon>pp_owner.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pay_page.xaml.cs">
+      <DependentUpon>Pay_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Employee_work_page.xaml.cs">
+      <DependentUpon>Employee_work_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Store_page_vender.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Store_page_vender.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vender_reg.xaml.cs">
+      <DependentUpon>vender_reg.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\vender_prof.xaml.cs">
+      <DependentUpon>vender_prof.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Orders_page.xaml.cs">
+      <DependentUpon>Orders_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Store_page.xaml.cs">
+      <DependentUpon>Store_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\my_profile.xaml.cs">
+      <DependentUpon>my_profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AccountReg.xaml.cs">
+      <DependentUpon>AccountReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Account.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\favotites.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Product_page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Register.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Search.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ShopBag.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Store_page_vender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\Program Files\visual studio\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v13.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

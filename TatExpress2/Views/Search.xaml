@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TatExpress2.Views.Search" Shell.NavBarIsVisible="False">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Grid.Row="0" >
+            <Label Text="Желания" FontSize="Large" FontAttributes="Bold" TextColor="Black" Margin="0" HorizontalOptions="Center"/>
+            <Frame BorderColor="#838383" CornerRadius="10" Padding="0,0,0,0" Margin="0,10,0,0">
+                <SearchBar  Placeholder="Найти товар или категорию" PlaceholderColor="#575757" FontSize="16" CancelButtonColor="red" TextColor="Black" WidthRequest="380" ></SearchBar>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" Grid.Row="1" Padding="0,10,0,0">
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+                
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+            <StackLayout Orientation="Horizontal" Padding="10,0,20,0">
+                <Image Source="acc.png" WidthRequest="40"></Image>
+                <Label Text="Электроника" TextColor="Black" VerticalOptions="Center"></Label>
+                <Image Source="arrow_down.png" WidthRequest="20" HorizontalOptions="EndAndExpand"></Image>
+
+            </StackLayout>
+            <Line BackgroundColor="#D0D0D0" WidthRequest="370" HorizontalOptions="Center" HeightRequest="1"></Line>
+
+        </StackLayout>
+    </Grid>
+    </ContentPage>
